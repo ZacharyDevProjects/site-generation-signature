@@ -1,0 +1,16 @@
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header h3  {
+    font-family: montserrat;
+    text-align: center;
+    font-size: calc(1.375rem + 1vw);
+    margin-bottom: 8px;
+}
+.header img {
+    width: 100%;
+    object-fit: cover;
+}

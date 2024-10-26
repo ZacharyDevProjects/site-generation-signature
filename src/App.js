@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Header from "./components/header";
+import Form from "./components/form";
+import SignatureCreator from "./components/SignatureCreator";
+import HelpingLink from "./components/helping_link";
+import Download from "./download/signatureDownload";
+import "./App.css";
 
 function App() {
+  const [formData, setFormData] = useState({
+    Prenom: "",
+    Nom: "",
+    Poste: "",
+    Telephone: "",
+    Telephone_bis: "",
+    Adresse: "",
+    Code_postal: "",
+    Ville: "",
+    Pays: "",
+  });
+
+  const handleInputChange = (field, value) => {
+    setFormData({ ...formData, [field]: value });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="page-Wrapper">
+      <div className="constraint">
+        <div className="grid">
+          <Header />
+          <Form formData={formData} onInputChange={handleInputChange} />
+          <SignatureCreator formData={formData} />
+          <Download formData={formData} />
+          <HelpingLink />
+        </div>
+      </div>
     </div>
   );
 }

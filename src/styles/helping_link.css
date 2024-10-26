@@ -1,0 +1,50 @@
+.linkCategories {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.linksGrid {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 0;
+
+}
+.gmailImg {
+  width: 8vw;
+  object-fit: cover;
+}
+
+.appleMail {
+    width: 8vw;
+    object-fit: cover;
+}
+
+.outlook {
+    width: 8vw;
+    object-fit: cover;
+}
+.spark  {
+    width: 4vw;
+    object-fit: cover;
+}
+
+.airMail {
+    width: 4vw;
+    object-fit: cover;
+}
+
+.thunderBird {
+    width: 4vw;
+    object-fit: cover;
+}
